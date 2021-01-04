@@ -34,7 +34,17 @@
                                 {
                                     "name": "mock-container",
                                     "image": "rafalskolasinski/mock-model:argo-test",
-                                    "resources": {"requests": {"cpu": "1m", "memory": "1Mi"}}
+                                    "resources": {"requests": {"cpu": "1m", "memory": "1Mi"}},
+                                    "volumeMounts": [{"name": "pvc-storage", "mountPath": "/pvc"}]
+                                }
+                            ]
+                            "volumes": [
+                                {
+                                    "name": "pvc-storage",
+                                    "persitentVolumeClaim": {
+                                        "claimName": "other-pvc"
+                                    }
+
                                 }
                             ]
                         }
