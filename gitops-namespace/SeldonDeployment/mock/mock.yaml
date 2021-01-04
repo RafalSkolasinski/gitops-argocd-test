@@ -41,7 +41,7 @@
                             "volumes": [
                                 {
                                     "name": "pvc-storage",
-                                    "persitentVolumeClaim": {
+                                    "persistentVolumeClaim": {
                                         "claimName": "other-pvc"
                                     }
                                 }
