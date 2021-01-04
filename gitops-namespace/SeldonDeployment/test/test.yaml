@@ -14,7 +14,7 @@ spec:
               memory: 50Mi
           volumeMounts:
           - name: pvc-storage
-            mountPath: /pvc
+            mountPath: /new-pvc-location
         volumes:
         - name: pvc-storage
           persistentVolumeClaim:
